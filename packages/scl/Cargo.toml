@@ -1,0 +1,27 @@
+# Cargo.toml
+[package]
+name = "scl"
+description = "Reference implementation of the scl configuration language, as a library"
+version = "0.1.0"
+edition = "2021"
+keywords = [ "configuration", "language", "utility", "config" ]
+exclude = [ "./build.rs", "./scl.g4" ]
+
+
+[features]
+serde = [ "dep:serde", "chrono/serde", "rust_decimal/serde-with-arbitrary-precision" ]
+
+[dependencies]
+anyhow = "1.0.75"
+antlr-rust = "0.3.0-beta"
+base64 = "0.21.3"
+bytes = "1.4.0"
+chrono = "0.4.26"
+nom = "7.1.3"
+rust_decimal = { version = "1.32.0", features = [ "c-repr" ] }
+serde = { version = "1.0.164", features = [ "derive" ], optional = true }
+
+[build-dependencies]
+anyhow = "1.0.75"
+camino = "1.1.6"
+ureq = "2.7.1"

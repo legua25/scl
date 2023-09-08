@@ -1,0 +1,35 @@
+# .gitignore
+### Others
+*.jar
+
+### Rust
+Cargo.lock
+**/*.rs.bk
+target/
+
+
+### JetBrains
+.idea/
+*.iml
+
+### Windows
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+ehthumbs_vista.db
+*.stackdump
+[Dd]esktop.ini
+$RECYCLE.BIN/
+*.cab
+*.msi
+*.msix
+*.msm
+*.msp
+*.lnk
+
+### Linux
+*~
+.fuse_hidden*
+.directory
+.Trash-*
+.nfs*
